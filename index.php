@@ -29,10 +29,8 @@
     } 
     else {
         $username = ''; // mail user name
-        $password = '';         // mail password
+        $password = ''; // mail password
         $server = '{imap-mail.outlook.com:993/ssl}INBOX'; // mail server name {imap.gmail.com:993/ssl}INBOX
-
-		/* Connecting Gmail server with IMAP */
 		
         $connection = imap_open($server, $username, $password) or die('Cannot connect to Gmail: ' . imap_last_error());
         $date = date_create();
